@@ -97,7 +97,7 @@
 
         if ([target isEqualToString:kInAppBrowserTargetSelf]) {
             [self openInCordovaWebView:absoluteUrl withOptions:options];
-        } else if ([target isEqualToString:kInAppBrowserTargetSystem]) {
+        } else if ([target caseInsensitiveCompare:kInAppBrowserTargetSystem] == NSOrderedSame) {
             [self openInSystem:absoluteUrl];
         } else { // _blank or anything else
             [self openInInAppBrowser:absoluteUrl withOptions:options];

@@ -142,7 +142,7 @@ public class InAppBrowser extends CordovaPlugin {
                         }
                     }
                     // SYSTEM
-                    else if (SYSTEM.equals(target)) {
+                    else if (SYSTEM.equalsIgnoreCase(target)) {
                         Log.d(LOG_TAG, "in system");
                         result = openExternal(url);
                     }
