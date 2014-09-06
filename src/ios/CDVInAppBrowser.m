@@ -98,7 +98,7 @@
         if ([target isEqualToString:kInAppBrowserTargetSelf]) {
             [self openInCordovaWebView:absoluteUrl withOptions:options];
         } else { // anything but _self
-            [self openInSystem:absoluteUrl withOptions:options];
+            [self openInSystem:absoluteUrl];
         }
 
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
