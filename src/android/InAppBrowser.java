@@ -175,15 +175,10 @@ public class InAppBrowser extends CordovaPlugin {
                             result = showWebPage(url, features);
                         }
                     }
-                    // SYSTEM
-                    else if (SYSTEM.equals(target)) {
+                    // SYSTEM - or anything else
+                    else {
                         Log.d(LOG_TAG, "in system");
                         result = openExternal(url);
-                    }
-                    // BLANK - or anything else
-                    else {
-                        Log.d(LOG_TAG, "in blank");
-                        result = showWebPage(url, features);
                     }
     
                     PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, result);

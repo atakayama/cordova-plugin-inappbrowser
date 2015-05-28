@@ -94,11 +94,9 @@
         }
 
         if ([target isEqualToString:kInAppBrowserTargetSelf]) {
-            [self openInCordovaWebView:absoluteUrl withOptions:options];
-        } else if ([target isEqualToString:kInAppBrowserTargetSystem]) {
+            [self openInCordovaWebView:absoluteUrl withOptions:options];]
+        } else { // anything but _self
             [self openInSystem:absoluteUrl];
-        } else { // _blank or anything else
-            [self openInInAppBrowser:absoluteUrl withOptions:options];
         }
 
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
