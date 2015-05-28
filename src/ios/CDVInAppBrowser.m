@@ -94,7 +94,7 @@
         }
 
         if ([target isEqualToString:kInAppBrowserTargetSelf]) {
-            [self openInCordovaWebView:absoluteUrl withOptions:options];]
+            [self openInCordovaWebView:absoluteUrl withOptions:options];
         } else { // anything but _self
             [self openInSystem:absoluteUrl];
         }
